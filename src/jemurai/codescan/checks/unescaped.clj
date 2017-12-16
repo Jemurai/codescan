@@ -47,7 +47,11 @@
   (or 
    (.endsWith (.toString file) ".rb")
    (.endsWith (.toString file) ".java")
-   (.endsWith (.toString file) ".js")  ; add more or make this work better.
+   (.endsWith (.toString file) ".js")  
+   (.endsWith (.toString file) ".coffee")  
+   (.endsWith (.toString file) ".go")
+   (.endsWith (.toString file) ".scala")     
+   ; add more or make this work better.
    )
   )
 

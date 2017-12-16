@@ -31,6 +31,7 @@
    	   (.endsWith (.toString file) ".java")
    	   (.endsWith (.toString file) ".js")
    	   (.endsWith (.toString file) ".coffee")
+   	   (.endsWith (.toString file) ".go")
    )
 )
 

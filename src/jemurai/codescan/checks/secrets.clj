@@ -40,11 +40,15 @@
    (.endsWith (.toString file) ".yml")
    (.endsWith (.toString file) ".rb")
    (.endsWith (.toString file) ".java")
+   (.endsWith (.toString file) ".coffee")
    ; Handle translation files...
    (.endsWith (.toString file) ".properties")
    (.endsWith (.toString file) ".txt")
    (.endsWith (.toString file) ".erb")
    (.endsWith (.toString file) ".js")
+   (.endsWith (.toString file) ".json")
+   (.endsWith (.toString file) ".ini") 
+   (.endsWith (.toString file) ".sh")   
     ; add more or make this work better.
   )
 )
@@ -80,6 +84,9 @@
       (.endsWith (.toString file) ".pem")
       (.endsWith (.toString file) ".cert")
       (.endsWith (.toString file) ".crt")
+      (.endsWith (.toString file) ".p12")
+      (.endsWith (.toString file) ".keystore")
+      (.endsWith (.toString file) "id_rsa")
     )
     (do 
       (report (.toString file) "Potential secrete file" "N/A")
