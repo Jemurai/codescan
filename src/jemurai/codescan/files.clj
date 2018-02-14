@@ -32,6 +32,7 @@
    	   (.endsWith (.toString file) ".js")
    	   (.endsWith (.toString file) ".coffee")
    	   (.endsWith (.toString file) ".go")
+   	   (.endsWith (.toString file) ".php")
    )
 )
 
@@ -39,6 +40,7 @@
 	 (or 
 	   (.endsWith (.toString file) ".erb")
    	   (.endsWith (.toString file) ".html")
+   	   (.endsWith (.toString file) ".phtml")
    	   (.endsWith (.toString file) ".css")
    	   (.endsWith (.toString file) ".scss")
    	   (.endsWith (.toString file) ".sass")

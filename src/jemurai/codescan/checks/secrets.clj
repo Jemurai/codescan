@@ -49,6 +49,8 @@
    (.endsWith (.toString file) ".json")
    (.endsWith (.toString file) ".ini") 
    (.endsWith (.toString file) ".sh")   
+   (.endsWith (.toString file) ".php")   
+   (.endsWith (.toString file) ".conf")   
     ; add more or make this work better.
   )
 )
