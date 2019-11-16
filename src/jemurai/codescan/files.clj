@@ -18,8 +18,14 @@
 (defn non-svn? [file] (not (.contains (.toString file) ".svn" )))
 
 ; Is it a java source file
-(defn java-source? [file] (.endsWith (.toString file) ".java"))
-
+(defn java-source? [file] 
+	(or
+		(.endsWith (.toString file) ".java")
+		(.endsWith (.toString file) ".cls")
+		(.endsWith (.toString file) ".trigger")
+	)
+)
+	
 (defn web-source? [file] (.endsWith (.toString file) ".html"))
 
 ; Intentially vague to catch erb, rb etc.
@@ -27,12 +33,17 @@
 
 (defn source? [file]
 	 (or 
-	   (.endsWith (.toString file) ".rb")
-   	   (.endsWith (.toString file) ".java")
-   	   (.endsWith (.toString file) ".js")
-   	   (.endsWith (.toString file) ".coffee")
-   	   (.endsWith (.toString file) ".go")
-   	   (.endsWith (.toString file) ".php")
+   (.endsWith (.toString file) ".rb")
+   (.endsWith (.toString file) ".java")
+   (.endsWith (.toString file) ".js")
+   (.endsWith (.toString file) ".coffee")
+   (.endsWith (.toString file) ".go")
+   (.endsWith (.toString file) ".php")
+   (.endsWith (.toString file) ".trigger")
+   (.endsWith (.toString file) ".cls")
+   (.endsWith (.toString file) ".clj")
+   (.endsWith (.toString file) ".py")
+   (.endsWith (.toString file) ".page")
    )
 )
 
@@ -44,6 +55,7 @@
    	   (.endsWith (.toString file) ".css")
    	   (.endsWith (.toString file) ".scss")
    	   (.endsWith (.toString file) ".sass")
+   	   (.endsWith (.toString file) ".page")
    )
 )
 

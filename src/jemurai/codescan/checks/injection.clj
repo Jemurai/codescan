@@ -18,6 +18,7 @@
 			(if (re-find #"Runtime.exec" line) true false)
             (if (re-find #"eval" line) true false)
             (if (re-find #"shell_exec" line) true false)
+            (if (re-find #"\(read-string" line) true false)
             (if (re-find #"import \"os/exec\"" line) true false)  ; golang
 
 ;			(if (re-find #"`" line) true false)
@@ -34,6 +35,7 @@
 	(or 
 		(.endsWith (.toString file) ".rb")
 		(.endsWith (.toString file) ".java")
+		(.endsWith (.toString file) ".clj")
         (.endsWith (.toString file) ".js")
         (.endsWith (.toString file) ".php")
         (.endsWith (.toString file) ".scala")
